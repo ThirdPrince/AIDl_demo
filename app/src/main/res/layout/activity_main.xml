@@ -44,5 +44,30 @@
         android:text="50 * 12"
         tools:ignore="OnClick" />
 
+    <LinearLayout
+        android:id="@+id/id_ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/id_tv_callback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Messenger Test!"/>
+
+        <Button android:id="@+id/id_btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"/>
+
+    </LinearLayout>
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

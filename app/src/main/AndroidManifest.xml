@@ -26,6 +26,10 @@
             android:process=":remote"
             >
         </service>
+        <service android:name=".service.MessengerService"
+            android:process=":remote"
+            >
+        </service>
     </application>
 
 </manifest>
