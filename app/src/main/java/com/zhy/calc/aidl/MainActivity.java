@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
             switch (msg.what){
                 case MSG_SUM:
                     TextView tv = (TextView) linearLayout.findViewById(msg.arg1);
+
+                    //String bean = (String) msg.getData().get("bean");
                     tv.setText(tv.getText()+"=>"+msg.arg2);
                     break;
             }
@@ -84,6 +86,15 @@ public class MainActivity extends AppCompatActivity {
                 tv.setId(a);
                 linearLayout.addView(tv);
                 Message clientMessage = Message.obtain(null,MSG_SUM,a,b);
+//                Bundle bundle = new Bundle();
+//
+//                Bean bean = new Bean();
+//                bean.pram1 = a;
+//                bean.pram2 = b;
+//                //clientMessage.obj = bean;
+//                bundle.putString("bean","test");
+//                bundle.putParcelable("bean1",bean);
+//                clientMessage.setData(bundle);
                 clientMessage.replyTo = messenger;
                 try {
                     mService.send(clientMessage);
